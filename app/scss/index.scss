@@ -1,5 +1,6 @@
 $bgcolour1 : #fff;
 $textColour : rgb(255, 255, 2);
+$logoColour1 : rgb(248, 237, 83);
 
 html{
     box-sizing: border-box;
@@ -11,6 +12,7 @@ html{
         margin: 0 auto;
         font-size: 62.5%;
         width:80%;
+        scroll-behavior: smooth;
         
         header{
             display: grid;
@@ -19,6 +21,7 @@ html{
             background: {
                 color: white;
             }
+            border-bottom:2px solid rgb(0, 174, 255);
             a {
                 padding-left: 1.2em;
                 img{
@@ -66,13 +69,19 @@ html{
             width:100%;
             display:grid;
             grid-template-columns: 20% 60% 20%;
+            grid-template-areas: "left center right";
             background: url("https://hdqwalls.com/download/girl-fitness-model-pic-1920x1080.jpg");
             background-size:cover;
             background-repeat: no-repeat;
             background-position: center;
             text-align:center;
+                h1{
+                    grid-area:center;
+                    padding-top:3.0em;
+                }
             .main-landing-title{
-                font-size: 2em;
+                
+                font-size: 3em;
                 color:white;
                 span{
                     padding-left:1.8em;
@@ -80,6 +89,20 @@ html{
                 }
             }
 
+        }
+        .section-main-landing-arrowdown{
+        text-align:center;
+        }
+
+        .section-quote{
+            font-size: 1.8em;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+            p{
+                font-style:italic;
+                font-family: 'Open Sans Condensed', sans-serif;
+                font-weight: 700;   
+            }
         }
 
     }
