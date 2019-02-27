@@ -13,11 +13,12 @@ html{
         font-size: 62.5%;
         width:80%;
         scroll-behavior: smooth;
+        font-family: 'Roboto Condensed', sans-serif;
         
         header{
             display: grid;
             grid-template-columns: 1fr 5fr;
-            font-family: 'Roboto Condensed', sans-serif;
+            
             background: {
                 color: white;
             }
@@ -51,13 +52,35 @@ html{
                     margin: 0;
                     padding: 0;
                     align-self: center;
+                    border-bottom: 1px yellow solid;
                         
                     
                     li{
-                        color:red;
+                    
                         list-style: none;
                         float:right;
                         padding: 1.2em;
+                        opacity: 0.5;
+
+                        &:hover{
+                            opacity: 1.5;
+                        }
+                        
+                    }
+                    .main-nav-right-instagramicon{
+                        color:#bc2a8d;
+                    }
+                    .main-nav-right-facebookicon{
+                        color:#3b5998;
+                    }
+                    .main-nav-right-twittericon{
+                        color:#1DA1F2;
+                    }
+                    .main-nav-right-snapchaticon{
+                        color: 	#c4c12a;
+                    }
+                    .main-nav-right-youtubeicon{
+                        color: #FF0000;
                     }    
 
                 }
@@ -97,13 +120,46 @@ html{
         .section-quote{
             font-size: 1.8em;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
+            text-align:center;
+            h2{
+                display: inline-block;
+            }
             p{
                 font-style:italic;
                 font-family: 'Open Sans Condensed', sans-serif;
-                font-weight: 700;   
+                font-weight: 800;   
+            }
+        }
+
+        .section-facilities{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 1.8em;
+            
+            margin-top: 3em;
+            
+
+            .section-facilities-card{
+                text-align:center;
+                border: 1px solid blue;
+                border-radius: 10%;
+                i{
+                    padding: 1.4em;
+                }
+                h3{
+                    font-size: 1.8em;
+                }
+                ul{
+                    line-height: 3em;
+                    li{
+                        
+                        list-style: none; 
+                    
+                    }
+                }
+                
+            }
             }
         }
 
     }
-}
