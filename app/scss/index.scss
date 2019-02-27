@@ -1,4 +1,4 @@
-$bgcolour1 : #111;
+$bgcolour1 : #fff;
 $textColour : rgb(255, 255, 2);
 
 html{
@@ -9,46 +9,60 @@ html{
     body{
         background: $bgcolour1;
         margin: 0 auto;
+        font-size: 62.5%;
+        width:80%;
+        
         header{
             display: grid;
-            grid-template-columns:  1fr 6fr 3fr;
-            grid-template-areas: "navtop navmid navright";
+            grid-template-columns: 1fr 5fr;
+            font-family: 'Roboto Condensed', sans-serif;
+            background: {
+                color: white;
+            }
             a {
-                width:60px;
-                height:60px;
+                padding-left: 1.2em;
                 img{
-                    width: 90px;
+                    width: auto;
                     height:90px;
                 }
             }
             nav{
-                grid-area:navright;
-                text-align: center;
-                ul{
+                display:grid;
+                grid-template-columns: 2fr 1fr;
+                grid-template-areas: "navmid navright";
+
+                .main-nav-center{
+                    grid-area:navmid;
+                    li{
+                        list-style:none;
+                        margin:0;
+                        padding:0;
+                        float:right;
+                        padding:1.3em;
+                        font-size:2.0em;
+                       
+                    }
+                }
+                .main-nav-right{
+                    grid-area:navright;
                     margin: 0;
                     padding: 0;
                     align-self: center;
+                        
                     
                     li{
+                        color:red;
                         list-style: none;
-                        margin: 1.2em;
-                        padding: 1.2em;
                         float:right;
-                        border: 2px solid $textColour;
-                        color:$textColour;
-                        &:hover{
-                            color:rgb(117, 117, 27);
-                            background:{
-                                color:rgb(46, 46, 14);
-                            }
-                        }
-                    }
+                        padding: 1.2em;
+                    }    
 
                 }
             }
         }
+    
         .section-main-landing{
-            height:100vh;
+            height:85vh;
             width:100%;
             display:grid;
             grid-template-columns: 20% 60% 20%;
@@ -57,35 +71,16 @@ html{
             background-repeat: no-repeat;
             background-position: center;
             text-align:center;
-                h1{
-                    padding-top: 2em;
-                    margin-left: 1.4em;
-                    text-align:center;
-                    color:black;
-                    grid-area: midmid;
-                    
+            .main-landing-title{
+                font-size: 2em;
+                color:white;
+                span{
+                    padding-left:1.8em;
+                    color:yellow;
                 }
-                #section-main-landing-div-buttons button{
-                    color:$textColour;
-                    color:white;
-                    border:1px white solid;
-                    border-radius: 100%;
-                    padding:1.8em;
-                    width: 10%;
-                    margin: 1.3em;
-                    background : { 
-                        color:orange
-                    }
-                }
-                }
-
-        }
-
-
-        .section-about{
-            h2{
-                text-align:center;
-                color:$textColour;
             }
+
         }
+
     }
+}
